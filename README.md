@@ -1,4 +1,4 @@
-# SPALE Diffusers
+# SPARKE Diffusers: Enhancing the Diversity of Diffusion Models
 
 **Scalable Prompt-Aware Latent Entropy-Based Diversity Guidance in Diffusion Models**
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository contains the official implementation of **SPALE**, a method for improving diversity in prompt-guided diffusion models using **prompt-aware latent entropy-based guidance**. SPALE introduces conditional entropy-guided sampling that dynamically adapts to semantically similar prompts and supports scalable generation across modern text-to-image architectures.
+This repository contains the official implementation of **SPARKE**, a method for improving diversity in prompt-guided diffusion models using **prompt-aware latent entropy-based guidance**. SPALE introduces conditional entropy-guided sampling that dynamically adapts to semantically similar prompts and supports scalable generation across modern text-to-image architectures.
 
 > Project Webpage: [https://mjalali.github.io/SPALE](https://mjalali.github.io/SPALE)
 
