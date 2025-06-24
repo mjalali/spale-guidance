@@ -1,3 +1,5 @@
+![SPARKE-diffusers](./sparke_diffusers_logo.png)
+
 # SPARKE Diffusers: Improving the Diversity of Diffusion Models in Diffusers
 
 **SPARKE: Scalable Prompt-Aware Diversity Guidance in Diffusion Models via RKE Score**
