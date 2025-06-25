@@ -1,4 +1,3 @@
-![SPARKE-diffusers](./sparke_diffusers_logo.png)
 <p align="center">
     <br>
     <img src="./sparke_diffusers_logo.png" width="800"/>
