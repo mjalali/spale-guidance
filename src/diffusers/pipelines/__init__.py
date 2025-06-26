@@ -275,7 +275,7 @@ else:
     _import_structure["omnigen"] = ["OmniGenPipeline"]
     _import_structure["paint_by_example"] = ["PaintByExamplePipeline"]
     _import_structure["pia"] = ["PIAPipeline"]
-    _import_structure["pixart_alpha"] = ["PixArtAlphaPipeline", "PixArtSigmaPipeline"]
+    _import_structure["pixart_alpha"] = ["PixArtAlphaPipeline", "PixArtSigmaPipeline", "SPARKEGuidedPixArtSigmaPipeline"]
     _import_structure["sana"] = ["SanaPipeline"]
     _import_structure["semantic_stable_diffusion"] = ["SemanticStableDiffusionPipeline"]
     _import_structure["shap_e"] = ["ShapEImg2ImgPipeline", "ShapEPipeline"]
@@ -298,6 +298,7 @@ else:
             "StableDiffusionInstructPix2PixPipeline",
             "StableDiffusionLatentUpscalePipeline",
             "StableDiffusionPipeline",
+            "SPARKEGuidedStableDiffusionPipeline",
             "StableDiffusionUpscalePipeline",
             "StableUnCLIPImg2ImgPipeline",
             "StableUnCLIPPipeline",
@@ -324,6 +325,7 @@ else:
             "StableDiffusionXLInpaintPipeline",
             "StableDiffusionXLInstructPix2PixPipeline",
             "StableDiffusionXLPipeline",
+            "SPARKEGuidedStableDiffusionXLPipeline",
         ]
     )
     _import_structure["stable_diffusion_diffedit"] = ["StableDiffusionDiffEditPipeline"]
@@ -642,7 +644,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
         )
         from .paint_by_example import PaintByExamplePipeline
         from .pia import PIAPipeline
-        from .pixart_alpha import PixArtAlphaPipeline, PixArtSigmaPipeline
+        from .pixart_alpha import PixArtAlphaPipeline, PixArtSigmaPipeline, SPARKEGuidedPixArtSigmaPipeline
         from .sana import SanaPipeline
         from .semantic_stable_diffusion import SemanticStableDiffusionPipeline
         from .shap_e import ShapEImg2ImgPipeline, ShapEPipeline
@@ -661,6 +663,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             StableDiffusionInstructPix2PixPipeline,
             StableDiffusionLatentUpscalePipeline,
             StableDiffusionPipeline,
+            SPARKEGuidedStableDiffusionPipeline,
             StableDiffusionUpscalePipeline,
             StableUnCLIPImg2ImgPipeline,
             StableUnCLIPPipeline,
@@ -682,6 +685,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             StableDiffusionXLInpaintPipeline,
             StableDiffusionXLInstructPix2PixPipeline,
             StableDiffusionXLPipeline,
+            SPARKEGuidedStableDiffusionXLPipeline,
         )
         from .stable_video_diffusion import StableVideoDiffusionPipeline
         from .t2i_adapter import (

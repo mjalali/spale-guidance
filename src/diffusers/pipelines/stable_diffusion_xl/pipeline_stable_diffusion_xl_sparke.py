@@ -24,23 +24,23 @@ from transformers import (
     CLIPVisionModelWithProjection,
 )
 
-from diffusers.callbacks import MultiPipelineCallbacks, PipelineCallback
-from diffusers.image_processor import PipelineImageInput, VaeImageProcessor
-from diffusers.loaders import (
+from ...callbacks import MultiPipelineCallbacks, PipelineCallback
+from ...image_processor import PipelineImageInput, VaeImageProcessor
+from ...loaders import (
     FromSingleFileMixin,
     IPAdapterMixin,
     StableDiffusionXLLoraLoaderMixin,
     TextualInversionLoaderMixin,
 )
-from diffusers.models import AutoencoderKL, ImageProjection, UNet2DConditionModel
-from diffusers.models.attention_processor import (
+from ...models import AutoencoderKL, ImageProjection, UNet2DConditionModel
+from ...models.attention_processor import (
     AttnProcessor2_0,
     FusedAttnProcessor2_0,
     XFormersAttnProcessor,
 )
-from diffusers.models.lora import adjust_lora_scale_text_encoder
-from diffusers.schedulers import KarrasDiffusionSchedulers
-from diffusers.utils import (
+from ...models.lora import adjust_lora_scale_text_encoder
+from ...schedulers import KarrasDiffusionSchedulers
+from ...utils import (
     USE_PEFT_BACKEND,
     deprecate,
     is_invisible_watermark_available,
@@ -50,11 +50,9 @@ from diffusers.utils import (
     scale_lora_layers,
     unscale_lora_layers,
 )
-from diffusers.utils.torch_utils import randn_tensor
-from diffusers.pipelines import DiffusionPipeline, StableDiffusionMixin
-from diffusers.pipelines.stable_diffusion_xl.pipeline_output import StableDiffusionXLPipelineOutput
-
-from diffusers.pipelines.rke_guidance_utils import RKEGuidedSampling
+from ...utils.torch_utils import randn_tensor
+from ..pipeline_utils import DiffusionPipeline, StableDiffusionMixin
+from .pipeline_output import StableDiffusionXLPipelineOutput
 
 if is_invisible_watermark_available():
     from diffusers.pipelines.stable_diffusion_xl.watermark import StableDiffusionXLWatermarker
@@ -933,7 +931,7 @@ class SPARKEGuidedStableDiffusionXLPipeline(
         ] = None,
         callback_on_step_end_tensor_inputs: List[str] = ["latents"],
         return_kernels=False,
-        rke_guided_sampler: RKEGuidedSampling = None,
+        rke_guided_sampler= None,
         **kwargs,
     ):
         r"""

@@ -32,7 +32,7 @@ else:
     _import_structure["clip_image_project_model"] = ["CLIPImageProjection"]
     _import_structure["pipeline_cycle_diffusion"] = ["CycleDiffusionPipeline"]
     _import_structure["pipeline_stable_diffusion"] = ["StableDiffusionPipeline"]
-    _import_structure["pipeline_stable_diffusion_rke"] = ["SPARKEGuidedStableDiffusionPipeline"]
+    _import_structure["pipeline_stable_diffusion_sparke"] = ["SPARKEGuidedStableDiffusionPipeline"]
     _import_structure["pipeline_stable_diffusion_attend_and_excite"] = ["StableDiffusionAttendAndExcitePipeline"]
     _import_structure["pipeline_stable_diffusion_gligen"] = ["StableDiffusionGLIGENPipeline"]
     _import_structure["pipeline_stable_diffusion_gligen_text_image"] = ["StableDiffusionGLIGENTextImagePipeline"]
